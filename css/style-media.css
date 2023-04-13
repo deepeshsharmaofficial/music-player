@@ -1,0 +1,59 @@
+/* Media Query */
+
+@media (min-width: 980px) {
+    .main-div {
+        padding-left: 44px;
+        padding-right: 132px;
+    }
+
+    /******** PLAYER ***********/
+
+    #player {
+        bottom: 0;
+    }
+
+    .player-btn-desktop {
+        display: block;
+    }
+
+    /* Player Panel */
+
+    .player-current {
+        width: 30%;
+    }
+    
+    .player-current figcaption{
+        text-align: left;
+    }
+
+    /* Player Action */
+
+    .player-actions {
+        justify-content: flex-end;
+    }
+
+    /******** FOOTER NAVIGATION ************/
+
+    #footer-navigation-mobile {
+        display: none;
+    }
+
+    /**************  *************/    
+    .player-btn-mobile {
+        display: none;
+    }
+
+    .container {
+        margin: 0;
+    }
+
+    .content {
+        margin: 0 0 -26.4px -44px;
+    }
+
+    .sidebar-queue {
+        display: block;
+    }
+
+}
+

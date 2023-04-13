@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+
+    <!-- Style Sheet link -->
+    <link rel="stylesheet" href="css/common-css.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/common-style.css">
+    <link rel="stylesheet" href="css/style-media.css">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/7c4875c8c0.js" crossorigin="anonymous"></script>
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="light-grey-bg">
+
+    <!-- Header -->
+    <header id="header" class="light-grey-bg bb-1px">
+        <div class="header-items left-header-item">
+            <a href="#" class="header-logo">
+                <img src="assets/images/studio-ninja-logo.jpg" alt="" style="width: 40px; border-radius:50%;">
+            </a>
+        </div>
+
+        <div class="header-items center-header-item">
+            <nav class="nav-menu">
+                <ul class="horizontal-list list-style-none">
+                    <li><a href="#" class="text-decoration-none grey">Music</a></li>
+                    <li><a href="#" class="text-decoration-none grey">Podcasts</a></li>
+                    <!-- <li><a href="#" class="text-decoration-none grey">Go Pro</a></li> -->
+                </ul>
+            </nav>
+                
+            <div class="search-input" onclick="searchFunction()">
+                <i class="ri-search-line ri-lg search-icon"></i>
+                <span> Search </span>
+            </div>
+
+            <div class="main-search-input">
+                <i class="ri-arrow-left-line ri-lg search-icon" onclick="goBack()"></i>
+                <input type="text" placeholder="search" class="search-input-text">
+            </div>
+        </div>
+
+        <div class="header-items right-header-item">            
+            <div id="header-user-menu">
+                <div href="#" class="user-profile-img" onclick="myFunction()">
+                    <img class="ii" src="assets/images/chill.jpg" alt="user profile image" style="width: 40px; border-radius:50%;">
+                </div>
+                <div class="user-profile-menu display-none">
+                    <nav class="user-profile-nav-menu">
+                        <div class="nav-list">       
+                            <ul class="nav-list-up-down list-style-none">
+                                <li class="nav-item">
+                                    <a href="#" class="text-decoration-none grey">My Music</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="text-decoration-none grey">My Profile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="text-decoration-none grey">History</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="text-decoration-none grey">Account Setting</a>
+                                </li>
+                            </ul>
+
+                            <hr class="nav-list-hr">
+
+                            <ul class="nav-list-up-down list-style-none">
+                                <li class="nav-item">
+                                    <a href="#" class="text-decoration-none grey">Help & Support</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="text-decoration-none grey">Log Out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>            
+            </div>
+        </div>
+    </header>
+
+    
+    <!-- Main -->
+    <div>
+        <div class="main-div">
+            <main>
+                <!-- Trending -->
+                <div id="trending-now">
+                    <section>
+                        <header class="mb-20px grey">
+                            <h2>Trending Now</h2>
+                            <div class="btn_s">
+                                <i id="left_scroll" class="ri-arrow-left-circle-line ri-xl"></i>
+                                <i id="right_scroll" class="ri-arrow-right-circle-line ri-xl"></i>
+                            </div>
+                        </header>
+
+                        <div class="container">
+                            <div class="content">
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <a href="/song.html" class="text-decoration-none">
+                                                    <i class="ri-play-fill ri-2x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="/song.html" class="block-image-link">
+                                                    <img src="assets/music/asset 4.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Raksha Bandhan
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Himesh Reshammiya
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <a href="/song.html" class="text-decoration-none">
+                                                    <i class="ri-play-fill ri-2x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="/song.html" class="block-image-link">
+                                                    <img src="assets/music/asset 4.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Raksha Bandhan
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Himesh Reshammiya
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <a href="/song.html" class="text-decoration-none">
+                                                    <i class="ri-play-fill ri-2x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="/song.html" class="block-image-link">
+                                                    <img src="assets/music/asset 4.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Raksha Bandhan
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Himesh Reshammiya
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <a href="/song.html" class="text-decoration-none">
+                                                    <i class="ri-play-fill ri-2x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="/song.html" class="block-image-link">
+                                                    <img src="assets/music/asset 4.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Raksha Bandhan
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Himesh Reshammiya
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <a href="/song.html" class="text-decoration-none">
+                                                    <i class="ri-play-fill ri-2x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="/song.html" class="block-image-link">
+                                                    <img src="assets/music/asset 4.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Raksha Bandhan
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Himesh Reshammiya
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <a href="/song.html" class="text-decoration-none">
+                                                    <i class="ri-play-fill ri-2x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="/song.html" class="block-image-link">
+                                                    <img src="assets/music/asset 4.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Raksha Bandhan
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Himesh Reshammiya
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <a href="/song.html" class="text-decoration-none">
+                                                    <i class="ri-play-fill ri-2x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="/song.html" class="block-image-link">
+                                                    <img src="assets/music/asset 4.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Raksha Bandhan
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Himesh Reshammiya
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <a href="/song.html" class="text-decoration-none">
+                                                    <i class="ri-play-fill ri-2x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="/song.html" class="block-image-link">
+                                                    <img src="assets/music/asset 4.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Raksha Bandhan
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Himesh Reshammiya
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <a href="/song.html" class="text-decoration-none">
+                                                    <i class="ri-play-fill ri-2x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="/song.html" class="block-image-link">
+                                                    <img src="assets/music/asset 4.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Raksha Bandhan
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Himesh Reshammiya
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <a href="/song.html" class="text-decoration-none">
+                                                    <i class="ri-play-fill ri-2x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="/song.html" class="block-image-link">
+                                                    <img src="assets/music/asset 4.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Raksha Bandhan
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Himesh Reshammiya
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Radio Stations -->
+                <div id="Radio-Stations" class="pt-20px">
+                    <section>
+                        <header class="mb-20px grey">
+                            <h2>Radio Stations</h2>
+                            <div class="btn_s">
+                                <i id="left_scroll" class="ri-arrow-left-circle-line ri-xl"></i>
+                                <i id="right_scroll" class="ri-arrow-right-circle-line ri-xl"></i>
+                            </div>
+                        </header>
+
+                        <div class="container">
+                            <div class="content">
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container border-radius-50">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/Radio Stations/asset 11.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container border-radius-50">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/Radio Stations/asset 11.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container border-radius-50">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/Radio Stations/asset 11.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container border-radius-50">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/Radio Stations/asset 11.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container border-radius-50">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/Radio Stations/asset 11.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container border-radius-50">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/Radio Stations/asset 11.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container border-radius-50">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/Radio Stations/asset 11.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container border-radius-50">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/Radio Stations/asset 11.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+                <!-- Recommended Artist Stations -->
+                <div id="Recommended-Artist-Stations" class="pt-20px">
+                    <section>
+                        <header class="mb-20px grey">
+                            <h2>Recommended Artist Stations</h2>
+                            <div class="btn_s">
+                                <i id="left_scroll" class="ri-arrow-left-circle-line ri-xl"></i>
+                                <i id="right_scroll" class="ri-arrow-right-circle-line ri-xl"></i>
+                            </div>
+                        </header>
+
+                        <div class="container">
+                            <div class="content">
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container border-radius-50">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/Recommended Artist Stations/asset 20.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container border-radius-50">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/Recommended Artist Stations/asset 20.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container border-radius-50">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/Recommended Artist Stations/asset 20.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container border-radius-50">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/Recommended Artist Stations/asset 20.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container border-radius-50">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/Recommended Artist Stations/asset 20.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container border-radius-50">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/Recommended Artist Stations/asset 20.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container border-radius-50">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/Recommended Artist Stations/asset 20.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container border-radius-50">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/Recommended Artist Stations/asset 20.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+
+                <!-- Popular Kids & Family Podcasts -->
+                <div id="Popular-Kids-and-Family-Podcasts" class="pt-20px">
+                    <section>
+                        <header class="mb-20px grey">
+                            <h2>Popular Kids & Family Podcasts</h2>
+                            <div class="btn_s">
+                                <i id="left_scroll" class="ri-arrow-left-circle-line ri-xl"></i>
+                                <i id="right_scroll" class="ri-arrow-right-circle-line ri-xl"></i>
+                            </div>
+                        </header>
+
+                        <div class="container">
+                            <div class="content">
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/popular kids and family podcast/asset 106.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Simple Telugu Stories
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/popular kids and family podcast/asset 106.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Simple Telugu Stories
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/popular kids and family podcast/asset 106.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Simple Telugu Stories
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/popular kids and family podcast/asset 106.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Simple Telugu Stories
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/popular kids and family podcast/asset 106.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Simple Telugu Stories
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/popular kids and family podcast/asset 106.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Simple Telugu Stories
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/popular kids and family podcast/asset 106.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Simple Telugu Stories
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/popular kids and family podcast/asset 106.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Simple Telugu Stories
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+
+                    </section>
+                </div>
+
+                <!-- Bhakti Hindi -->
+                <div id="bhakti-hindi" class="pt-20px pb-80px">
+                    <section>
+                        <header class="mb-20px grey">
+                            <h2>Bhakti - Hindi</h2>
+                            <div class="btn_s">
+                                <i id="left_scroll" class="ri-arrow-left-circle-line ri-xl"></i>
+                                <i id="right_scroll" class="ri-arrow-right-circle-line ri-xl"></i>
+                            </div>
+                        </header>
+
+                        <div class="container">
+                            <div class="content">
+                                
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/bhakti/asset 136.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Hanuman
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/bhakti/asset 136.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Hanuman
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/bhakti/asset 136.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Hanuman
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/bhakti/asset 136.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Hanuman
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/bhakti/asset 136.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Hanuman
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/bhakti/asset 136.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Hanuman
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/bhakti/asset 136.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Hanuman
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/bhakti/asset 136.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Hanuman
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layout-item">
+                                    <div class="block">
+                                        <div class="block-image-container">
+                                            <div class="block-action">
+                                                <i class="ri-play-fill ri-2x"></i>
+                                            </div>
+                                            <div class="block-image">
+                                                <a href="#" class="block-image-link">
+                                                    <img src="assets/bhakti/asset 136.jpeg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-body">
+                                            <h4 class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                    Hanuman
+                                                </a>
+                                            </h4>
+                                            <p class="text-ellipsis">
+                                                <a href="#" class="text-decoration-none grey-hover font-1x">
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <aside class="sidebar-queue light-grey-bg">
+        <div class="scroll">
+            <header class="pd-11px-22px">
+                <div class="scroll-layout">
+                    <div class="layout-item">
+                        <strong>Queue</strong>
+                    </div>
+                </div>
+            </header>
+            <hr>
+            <div class="queue-container ptb-11px">
+                <ol style="list-style: none;">
+
+                    <li>
+                        <article class="snippet">
+                            <div class="snippet-item">
+                                <figure>
+                                    <div class="flag-img pr-10px">
+                                        <img src="assets/music/asset 4.jpeg" alt="" style="width: 50px;">
+                                    </div>
+                                    <figcaption class="flag-body">
+                                        <h4>Kesariya</h4>
+                                        <p>Pritam, Arjit Singh</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="snippet-item">
+                                <i class="ri-heart-line ri-lg"></i>
+                                <!-- icon -->
+                            </div>
+                            <div class="snippet-item">
+                                <span>4:28</span>
+                                <span></span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="snippet">
+                            <div class="snippet-item">
+                                <figure>
+                                    <div class="flag-img pr-10px">
+                                        <img src="assets/music/asset 4.jpeg" alt="" style="width: 50px;">
+                                    </div>
+                                    <figcaption class="flag-body">
+                                        <h4>Kesariya</h4>
+                                        <p>Pritam, Arjit Singh</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="snippet-item">
+                                <i class="ri-heart-line ri-lg"></i>
+                                <!-- icon -->
+                            </div>
+                            <div class="snippet-item">
+                                <span>4:28</span>
+                                <span></span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="snippet">
+                            <div class="snippet-item">
+                                <figure>
+                                    <div class="flag-img pr-10px">
+                                        <img src="assets/music/asset 4.jpeg" alt="" style="width: 50px;">
+                                    </div>
+                                    <figcaption class="flag-body">
+                                        <h4>Kesariya</h4>
+                                        <p>Pritam, Arjit Singh</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="snippet-item">
+                                <i class="ri-heart-line ri-lg"></i>
+                                <!-- icon -->
+                            </div>
+                            <div class="snippet-item">
+                                <span>4:28</span>
+                                <span></span>
+                            </div>
+                        </article>
+                    </li>
+
+
+                    <li>
+                        <article class="snippet">
+                            <div class="snippet-item">
+                                <figure>
+                                    <div class="flag-img pr-10px">
+                                        <img src="assets/music/asset 4.jpeg" alt="" style="width: 50px;">
+                                    </div>
+                                    <figcaption class="flag-body">
+                                        <h4>Kesariya</h4>
+                                        <p>Pritam, Arjit Singh</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="snippet-item">
+                                <i class="ri-heart-line ri-lg"></i>
+                                <!-- icon -->
+                            </div>
+                            <div class="snippet-item">
+                                <span>4:28</span>
+                                <span></span>
+                            </div>
+                        </article>
+                    </li>
+
+
+                    <li>
+                        <article class="snippet">
+                            <div class="snippet-item">
+                                <figure>
+                                    <div class="flag-img pr-10px">
+                                        <img src="assets/music/asset 4.jpeg" alt="" style="width: 50px;">
+                                    </div>
+                                    <figcaption class="flag-body">
+                                        <h4>Kesariya</h4>
+                                        <p>Pritam, Arjit Singh</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="snippet-item">
+                                <i class="ri-heart-line ri-lg"></i>
+                                <!-- icon -->
+                            </div>
+                            <div class="snippet-item">
+                                <span>4:28</span>
+                                <span></span>
+                            </div>
+                        </article>
+                    </li>
+
+
+                    <li>
+                        <article class="snippet">
+                            <div class="snippet-item">
+                                <figure>
+                                    <div class="flag-img pr-10px">
+                                        <img src="assets/music/asset 4.jpeg" alt="" style="width: 50px;">
+                                    </div>
+                                    <figcaption class="flag-body">
+                                        <h4>Kesariya</h4>
+                                        <p>Pritam, Arjit Singh</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="snippet-item">
+                                <i class="ri-heart-line ri-lg"></i>
+                                <!-- icon -->
+                            </div>
+                            <div class="snippet-item">
+                                <span>4:28</span>
+                                <span></span>
+                            </div>
+                        </article>
+                    </li>
+
+
+                    <li>
+                        <article class="snippet">
+                            <div class="snippet-item">
+                                <figure>
+                                    <div class="flag-img pr-10px">
+                                        <img src="assets/music/asset 4.jpeg" alt="" style="width: 50px;">
+                                    </div>
+                                    <figcaption class="flag-body">
+                                        <h4>Kesariya</h4>
+                                        <p>Pritam, Arjit Singh</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="snippet-item">
+                                <i class="ri-heart-line ri-lg"></i>
+                                <!-- icon -->
+                            </div>
+                            <div class="snippet-item">
+                                <span>4:28</span>
+                                <span></span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="snippet">
+                            <div class="snippet-item">
+                                <figure>
+                                    <div class="flag-img pr-10px">
+                                        <img src="assets/music/asset 4.jpeg" alt="" style="width: 50px;">
+                                    </div>
+                                    <figcaption class="flag-body">
+                                        <h4>Kesariya</h4>
+                                        <p>Pritam, Arjit Singh</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="snippet-item">
+                                <i class="ri-heart-line ri-lg"></i>
+                                <!-- icon -->
+                            </div>
+                            <div class="snippet-item">
+                                <span>4:28</span>
+                                <span></span>
+                            </div>
+                        </article>
+                    </li>
+
+
+                    <li>
+                        <article class="snippet">
+                            <div class="snippet-item">
+                                <figure>
+                                    <div class="flag-img pr-10px">
+                                        <img src="assets/music/asset 4.jpeg" alt="" style="width: 50px;">
+                                    </div>
+                                    <figcaption class="flag-body">
+                                        <h4>Kesariya</h4>
+                                        <p>Pritam, Arjit Singh</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="snippet-item">
+                                <i class="ri-heart-line ri-lg"></i>
+                                <!-- icon -->
+                            </div>
+                            <div class="snippet-item">
+                                <span>4:28</span>
+                                <span></span>
+                            </div>
+                        </article>
+                    </li>
+
+
+                    <li>
+                        <article class="snippet">
+                            <div class="snippet-item">
+                                <figure>
+                                    <div class="flag-img pr-10px">
+                                        <img src="assets/music/asset 4.jpeg" alt="" style="width: 50px;">
+                                    </div>
+                                    <figcaption class="flag-body">
+                                        <h4>Kesariya</h4>
+                                        <p>Pritam, Arjit Singh</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="snippet-item">
+                                <i class="ri-heart-line ri-lg"></i>
+                                <!-- icon -->
+                            </div>
+                            <div class="snippet-item">
+                                <span>4:28</span>
+                                <span></span>
+                            </div>
+                        </article>
+                    </li>
+
+
+                    <li>
+                        <article class="snippet">
+                            <div class="snippet-item">
+                                <figure>
+                                    <div class="flag-img pr-10px">
+                                        <img src="assets/music/asset 4.jpeg" alt="" style="width: 50px;">
+                                    </div>
+                                    <figcaption class="flag-body">
+                                        <h4>Kesariya</h4>
+                                        <p>Pritam, Arjit Singh</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="snippet-item">
+                                <i class="ri-heart-line ri-lg"></i>
+                                <!-- icon -->
+                            </div>
+                            <div class="snippet-item">
+                                <span>4:28</span>
+                                <span></span>
+                            </div>
+                        </article>
+                    </li>
+
+
+                    <li>
+                        <article class="snippet">
+                            <div class="snippet-item">
+                                <figure>
+                                    <div class="flag-img pr-10px">
+                                        <img src="assets/music/asset 4.jpeg" alt="" style="width: 50px;">
+                                    </div>
+                                    <figcaption class="flag-body">
+                                        <h4>Kesariya</h4>
+                                        <p>Pritam, Arjit Singh</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="snippet-item">
+                                <i class="ri-heart-line ri-lg"></i>
+                                <!-- icon -->
+                            </div>
+                            <div class="snippet-item">
+                                <span>4:28</span>
+                                <span></span>
+                            </div>
+                        </article>
+                    </li>
+
+
+                    <li>
+                        <article class="snippet">
+                            <div class="snippet-item">
+                                <figure>
+                                    <div class="flag-img pr-10px">
+                                        <img src="assets/music/asset 4.jpeg" alt="" style="width: 50px;">
+                                    </div>
+                                    <figcaption class="flag-body">
+                                        <h4>Kesariya</h4>
+                                        <p>Pritam, Arjit Singh</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="snippet-item">
+                                <i class="ri-heart-line ri-lg"></i>
+                                <!-- icon -->
+                            </div>
+                            <div class="snippet-item">
+                                <span>4:28</span>
+                                <span></span>
+                            </div>
+                        </article>
+                    </li>
+
+
+                    <li>
+                        <article class="snippet">
+                            <div class="snippet-item">
+                                <figure>
+                                    <div class="flag-img pr-10px">
+                                        <img src="assets/music/asset 4.jpeg" alt="" style="width: 50px;">
+                                    </div>
+                                    <figcaption class="flag-body">
+                                        <h4>Kesariya</h4>
+                                        <p>Pritam, Arjit Singh</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="snippet-item">
+                                <i class="ri-heart-line ri-lg"></i>
+                                <!-- icon -->
+                            </div>
+                            <div class="snippet-item">
+                                <span>4:28</span>
+                                <span></span>
+                            </div>
+                        </article>
+                    </li>
+
+
+                    <li>
+                        <article class="snippet">
+                            <div class="snippet-item">
+                                <figure>
+                                    <div class="flag-img pr-10px">
+                                        <img src="assets/music/asset 4.jpeg" alt="" style="width: 50px;">
+                                    </div>
+                                    <figcaption class="flag-body">
+                                        <h4>Kesariya</h4>
+                                        <p>Pritam, Arjit Singh</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="snippet-item">
+                                <i class="ri-heart-line ri-lg"></i>
+                                <!-- icon -->
+                            </div>
+                            <div class="snippet-item">
+                                <span>4:28</span>
+                                <span></span>
+                            </div>
+                        </article>
+                    </li>
+
+
+                    <li>
+                        <article class="snippet">
+                            <div class="snippet-item">
+                                <figure>
+                                    <div class="flag-img pr-10px">
+                                        <img src="assets/music/asset 4.jpeg" alt="" style="width: 50px;">
+                                    </div>
+                                    <figcaption class="flag-body">
+                                        <h4>Kesariya</h4>
+                                        <p>Pritam, Arjit Singh</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="snippet-item">
+                                <i class="ri-heart-line ri-lg"></i>
+                                <!-- icon -->
+                            </div>
+                            <div class="snippet-item">
+                                <span>4:28</span>
+                                <span></span>
+                            </div>
+                        </article>
+                    </li>
+
+
+                    <li>
+                        <article class="snippet">
+                            <div class="snippet-item">
+                                <figure>
+                                    <div class="flag-img pr-10px">
+                                        <img src="assets/music/asset 4.jpeg" alt="" style="width: 50px;">
+                                    </div>
+                                    <figcaption class="flag-body">
+                                        <h4>Kesariya</h4>
+                                        <p>Pritam, Arjit Singh</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="snippet-item">
+                                <i class="ri-heart-line ri-lg"></i>
+                                <!-- icon -->
+                            </div>
+                            <div class="snippet-item">
+                                <span>4:28</span>
+                                <span></span>
+                            </div>
+                        </article>
+                    </li>
+
+                </ol>
+            </div>
+        </div>
+    </aside>
+
+
+    <aside id="player" class="bt-1px">
+        <div class="player-panel-container light-grey-hover-bg pd-10px">
+
+            <!-- Player Current -->
+            <figure class="player-current text-ellipsis">
+                <div class="pr-10px">
+                    <img src="assets/queue/7rings.jpg" alt="" class="img-size">
+                </div>
+
+                <figcaption>
+                    <h4 class="text-ellipsis">
+                        <a href="#" class="text-decoration-none grey-hover font-2x">
+                            Pal Pal Dil Ke Paas - Title Track
+                        </a>
+                    </h4>
+                    <p class="text-ellipsis">
+                        <a href="#" class="text-decoration-none grey-hover font-2x">
+                            Arijit Singh
+                        </a>
+                    </p>
+                </figcaption>
+
+                <!-- for mobile only -->
+                <div class="pr-20px-30px player-btn-mobile">
+                    <i class="fa-sharp fa-solid fa-pause fa-lg"></i>
+                    <!-- <i class="ri-pause-mini-fill ri-2x"></i> -->
+                </div>
+
+            </figure>
+
+
+            <!-- Player Controls -->
+            <ul class="player-controls list-style-none player-btn-desktop">
+                <li class="player-btn player-volume pd-20px">
+                    <i class="fa-solid fa-volume-high"></i>
+                </li>
+            </ul>
+
+            <!-- Player Actions -->
+            <ul class="player-actions list-style-none player-btn-desktop">
+                <li class="player-btn pd-20px">
+                    <i class="fa-solid fa-shuffle fa-lg"></i>
+                </li>
+                <li class="player-btn pd-20px">
+                    <i class="fa-solid fa-backward-step fa-lg"></i>
+                </li>
+                <li class="player-btn pd-20px">
+                    <i class="fa-sharp fa-solid fa-pause fa-lg"></i>
+                </li>
+                <li class="player-btn pd-20px">
+                    <i class="fa-solid fa-forward-step fa-lg"></i>
+                </li>
+                <li class="player-btn pd-20px">
+                    <i class="fa-solid fa-rotate-right fa-lg"></i>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
+    </aside>
+
+    <script src="main.js"></script>
+</body>
+</html>
+

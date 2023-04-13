@@ -1,0 +1,143 @@
+/***** Common CSS **********/
+
+/* Padding */
+
+.pd-10px {
+    padding: 10px;
+}
+
+.pd-20px {
+    padding: 20px;
+}
+
+.pt-20px {
+    padding-top: 20px;
+}
+
+.pb-80px {
+    padding-bottom: 80px;
+}
+
+.pr-10px {
+    padding-right: 10px;
+}
+
+.pr-20px-30px {
+    padding: 20px 30px;
+}
+
+.pd-11px-22px {
+    padding: 11px 22px;
+}
+
+.ptb-11px {
+    padding: 11px 0;
+}
+
+
+/* margin */
+
+.mr-10px {
+    margin: 10px;
+}
+
+.mr-10px {
+    margin-right: 10px;
+}
+
+.mb-20px {
+    margin-bottom: 20px;
+}
+
+.mb-10px {
+    margin-bottom: 10px;
+}
+
+
+/*  */
+
+.img-size {
+    width: 56px;
+    border-radius: 20%;
+}
+
+.border-radius-50 {
+    border-radius: 50%;
+}
+
+.list-style-none {
+    list-style: none;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.text-ellipsis {
+    /* display: block; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+}
+
+.player-btn-desktop {
+    display: none;
+}
+
+
+/* Common Color */
+
+.grey {
+    color: #3e3e3e;
+}
+
+.grey-hover {
+    color: #3e3e3ed3;
+}
+
+.grey-hover:hover {
+    color: #3e3e3e;
+}
+
+
+.light-grey-bg {
+    background-color: #f6f6f6;
+}
+
+
+/* Common Border */
+
+.bt-1px {
+    border-top: 1px solid #81818130;
+}
+
+.bb-1px {
+    border-bottom: 1px solid #81818130;
+}
+
+.b-1px {
+    border: 1px solid #81818140;
+}
+
+/* Common size */
+
+.font-1x {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+}
+
+.font-2x {
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
+
+.font-3x {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+}
+
+/* js */
+
+.display-none {
+    display: none;
+}
