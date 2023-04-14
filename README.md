@@ -1,2 +1,2 @@
-# music-player
-Music Player Using Html, CSS, Javascript
+# Jio Saavn-like Frontend Music Player
+This is a frontend music player built with HTML, CSS and JavaScript that is inspired by the popular Indian music streaming platform, Jio Saavn. The music player features a simple and intuitive user interface that allows users to easily browse and play songs from their favorite artists and albums.
